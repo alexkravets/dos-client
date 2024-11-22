@@ -1,0 +1,6 @@
+export const UNAUTHORIZED_ERROR = "UnauthorizedError"
+export const ACCESS_DENIED_ERROR = "AccessDeniedError"
+export const INVALID_INPUT_ERROR = "InvalidInputError"
+export const DOCUMENT_EXISTS_ERROR = "DocumentExistsError"
+export const DOCUMENT_NOT_FOUND_ERROR = "DocumentNotFoundError"
+export const UNPROCESSIBLE_CONDITION_ERROR = "UnprocessibleConditionError"

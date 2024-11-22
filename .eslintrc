@@ -1,0 +1,64 @@
+{
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "eslint-config-prettier"
+  ],
+  "globals": {},
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "ignorePatterns": [
+    "node_modules/"
+  ],
+  "rules": {
+    "react/prop-types": "error",
+    "no-extra-boolean-cast": 0,
+    "no-unneeded-ternary": 0,
+    "no-nested-ternary:": "off",
+    "import/no-named-as-default": 0,
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "off",
+    "no-use-before-define": "off",
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme", "any other term"], "location": "anywhere" }],
+    "react/jsx-curly-brace-presence": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-boolean-value": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/jsx-filename-extension": "off",
+    "no-plusplus": "off",
+    "arrow-body-style": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "import/no-cycle": "off",
+    "no-param-reassign": "off",
+    "consistent-return": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "react/function-component-definition": "off",
+    "no-return-assign": "off",
+    "no-unused-expressions": "off",
+    "array-callback-return": "off",
+    "react/no-array-index-key": "off",
+    "no-lonely-if": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "no-else-return": ["error", {"allowElseIf": true}],
+    "react/require-default-props": ["error", {
+      "forbidDefaultForRequired": true,
+      "functions": "defaultArguments"
+    }]
+  }
+}
