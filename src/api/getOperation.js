@@ -31,6 +31,14 @@ const getOperation = (httpMethods, schemasMap, operationId) => {
   const getSchema = (inputs = []) =>
     extendSchema(formInputs, inputs)
 
+  const getAttributeSchema = (attributeName, inputs = []) => {
+    const attributeInputSchema = formInputs
+      .find(({ name }) => name === attributeName)
+      .schema
+
+    return extendSchema(attributeInputSchema, inputs)
+  }
+
   const getIndexItemSchema = () => {
     const tableColumns = schemasMap[tableColumnsKey]
 
@@ -49,12 +57,13 @@ const getOperation = (httpMethods, schemasMap, operationId) => {
     isCreate,
     isUpdate,
     httpMethod,
-    getIndexItemSchema
+    getIndexItemSchema,
   }
 
   if (formInputs) {
     operation.schema = formInputs
     operation.getSchema = getSchema
+    operation.getAttributeSchema = getAttributeSchema
   }
 
   return operation

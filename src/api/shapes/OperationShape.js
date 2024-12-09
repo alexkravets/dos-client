@@ -11,9 +11,10 @@ const OperationShape = PropTypes.exact({
   isIndex: PropTypes.bool.isRequired,
   isCreate: PropTypes.bool.isRequired,
   isUpdate: PropTypes.bool.isRequired,
-  getSchema: PropTypes.func,
   httpMethod: PropTypes.oneOf(HTTP_METHODS).isRequired,
+  getSchema: PropTypes.func,
   getIndexItemSchema: PropTypes.func,
+  getAttributeSchema: PropTypes.func,
 })
 
 export default OperationShape
