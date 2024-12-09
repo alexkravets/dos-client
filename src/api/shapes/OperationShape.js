@@ -7,6 +7,7 @@ const HTTP_METHODS = ["GET", "DELETE", "PATCH", "POST"]
 
 const OperationShape = PropTypes.exact({
   id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   schema: PropTypes.arrayOf(InputShape),
   isIndex: PropTypes.bool.isRequired,
   isCreate: PropTypes.bool.isRequired,

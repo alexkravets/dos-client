@@ -8,6 +8,8 @@ const getOperation = (httpMethods, schemasMap, operationId) => {
   const operations = Object.keys(httpMethods)
   const isSupported = operations.includes(operationId)
 
+  const [ , operationName ] = operationId.split("/")
+
   if (!isSupported) {
     const message = `Operation "${operationId}" is missing. ` +
       `Add "${operationId}" to "operations" list in "src/api.yaml" ` +
@@ -53,6 +55,7 @@ const getOperation = (httpMethods, schemasMap, operationId) => {
 
   const operation = {
     id: operationId,
+    name: operationName,
     isIndex,
     isCreate,
     isUpdate,
