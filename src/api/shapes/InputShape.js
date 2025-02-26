@@ -18,6 +18,7 @@ const InputShape = PropTypes.exact({
     PropTypes.arrayOf(SelectOptionShape),
     PropTypes.arrayOf(PropTypes.string),
   ]),
+  request: PropTypes.func,
   minimum: PropTypes.number,
   maximum: PropTypes.number,
   required: PropTypes.bool,
